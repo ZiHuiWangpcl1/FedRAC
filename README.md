@@ -33,29 +33,42 @@ torchvision==0.20.0+cu124
 1. Please modify the `task = './my_task/SVHN_POW'` statement in the main function according to the task name.
 2. Please modify the `benchmark` option in the main function according to the dataset name.
 3. Please modify the `partitioner` option in the main function according to the experimental scenario of the dataset.
+4. Please modify the `algorithm` and `model` options in the main function `runner = flgo.init()` according to the usage method and the model used.
 
 ### Experimental scenarios
-Please navigate to the folder containing the main function and run the code.
+We have different terminal commands for different scenarios.
+Here's an example for the POW scenario.
 
-1.POW
 ```shell
 python main.py --num_rounds 100000 --batch_size 32 --num_steps 1 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1
 ```
 
-2.CLA
-```shell
-python main.py --num_rounds 100000 --batch_size 32 --num_steps 5 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1
-```
+[//]: # ()
+[//]: # (2.CLA)
 
-3.DIR(3.0)
-```shell
-python main.py --num_rounds 100000 --batch_size 32 --num_steps 10 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1
-```
+[//]: # (```shell)
 
-4.DIR(7.0)
-```shell
-python main.py --num_rounds 100000 --batch_size 32 --num_steps 5 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1
-```
+[//]: # (python main.py --num_rounds 100000 --batch_size 32 --num_steps 5 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (3.DIR&#40;3.0&#41;)
+
+[//]: # (```shell)
+
+[//]: # (python main.py --num_rounds 100000 --batch_size 32 --num_steps 10 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1)
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (4.DIR&#40;7.0&#41;)
+
+[//]: # (```shell)
+
+[//]: # (python main.py --num_rounds 100000 --batch_size 32 --num_steps 5 --learning_rate 0.03 --seed 0 --eval_interval 1 --clip_grad 1)
+
+[//]: # (```)
 
 ### Results
 We conducted the experiment in four parts:
