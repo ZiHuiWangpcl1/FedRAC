@@ -1,6 +1,6 @@
 # FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning
 
-This is the official implementation of the CVPR 2026 paper [FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning](http://arxiv.org/abs/xxx).
+This is the official implementation of the CVPR 2026 paper [FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_FedRAC_Rolling_Submodel_Allocation_for_Collaborative_Fairness_in_Federated_Learning_CVPR_2026_paper.html).
 ## Abstract
 Collaborative fairness in federated learning ensures that clients are rewarded according to their contributions, thereby fostering long-term participation among clients. However, existing methods often under-reward low-contributing clients in the early training stage and neglect critical issues (consistency across local models or unequal neuron training frequencies in the global model), leading to degraded performance.
 1. Existing methods assign fixed reputation weights to clients throughout training, under-rewarding low-contribution clients in the early stages;
@@ -85,5 +85,11 @@ We conducted the experiment in four parts:
 ## Citation
 If you find our paper useful, please cite the paper:
 ```
-XXX
+@inproceedings{wang2026fedrac,
+  title={FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning},
+  author={Wang, Zihui and Fu, Yuhang and Du, Mengmeng and Yuan, Zhimin and Liu, Yachen and Liao, Weisheng and Wang, Kaiyu and Wang, Zheng},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={31802--31811},
+  year={2026}
+}
 ```
