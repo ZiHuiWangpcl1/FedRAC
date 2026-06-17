@@ -1,17 +1,20 @@
 # FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning
 
 This is the official implementation of the CVPR 2026 paper [FedRAC: Rolling Submodel Allocation for Collaborative Fairness in Federated Learning](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_FedRAC_Rolling_Submodel_Allocation_for_Collaborative_Fairness_in_Federated_Learning_CVPR_2026_paper.html).
+
 ## Abstract
 Collaborative fairness in federated learning ensures that clients are rewarded according to their contributions, thereby fostering long-term participation among clients. However, existing methods often under-reward low-contributing clients in the early training stage and neglect critical issues (consistency across local models or unequal neuron training frequencies in the global model), leading to degraded performance.
 1. Existing methods assign fixed reputation weights to clients throughout training, under-rewarding low-contribution clients in the early stages;
 2. Gradient-based methods fail to maintain consistency across local models;
 3. Submodel-based methods cause unequal training frequencies for neurons in the global model.
 ![motivation](images/figure1.png)
+
 ## Overview
 The overall framework of FedRAC that achieves α-BCF by maintaining consistency across local models. FedRAC consists of two module: 
 1. **Dynamic Reputation Calculation** module computes real-time client reputations by integrating local performance and global model progress, enabling accurate contribution-aware incentives; 
 2. **Rolling Submodel Allocation** module maintains a historical neuron aggregation frequency table and prioritizes low-frequency neurons when constructing submodels. It then assigns high-performance submodels to high-reputation clients, ensuring both inter-model consistency (aligned update directions) and intra-model consistency (balanced neuron training), while significantly improving overall model performance.
 ![overview](images/figure2.png)
+
 ## Experiments
 
 ### Requirements
@@ -80,7 +83,6 @@ We conducted the experiment in four parts:
 ![result3](images/rate.png)
 4. Ablation study:
 ![result4](images/ablation1.png)
-
 
 ## Citation
 If you find our paper useful, please cite the paper:
